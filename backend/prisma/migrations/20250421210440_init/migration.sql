@@ -10,6 +10,7 @@ CREATE TYPE "ContentType" AS ENUM ('ARTICLE', 'VIDEO', 'AUDIO', 'IMAGE', 'DOCUME
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
     "role" "Role" NOT NULL DEFAULT 'CONTRIBUTOR',
@@ -23,6 +24,7 @@ CREATE TABLE "User" (
 CREATE TABLE "ContentItem" (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
+    "deadline" TIMESTAMP(3),
     "status" "ContentStatus" NOT NULL DEFAULT 'IDEA',
     "type" "ContentType" NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

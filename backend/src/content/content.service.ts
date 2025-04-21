@@ -19,6 +19,13 @@ export class ContentService {
         return this.prisma.contentItem.findMany({
             where: {
                 ...(isEditor ? {} : { authors: { some: { id: userId } } })
+            },
+            include: {
+                authors: {
+                    omit: {
+                        password: true
+                    }
+                }
             }
         })
     }
@@ -35,7 +42,8 @@ export class ContentService {
                 title: content.title,
                 authors: { connect: content.authors.map(author => ({ id: author })) },
                 status: content.status,
-                type: content.type
+                type: content.type,
+                deadline: content.deadline
             }
         })
     }

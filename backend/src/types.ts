@@ -6,4 +6,5 @@ export type Content = {
     authors: string[]
     status: ContentStatus
     type: ContentType
+    deadline: Date
 }

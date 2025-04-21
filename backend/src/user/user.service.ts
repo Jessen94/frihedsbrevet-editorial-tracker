@@ -6,18 +6,17 @@ export class UserService {
     constructor(private readonly prisma: PrismaService) { }
 
     async getUserById(userId: string) {
-        const user = await this.prisma.user.findUnique({
-            where: { id: userId }
+        return this.prisma.user.findUnique({
+            where: { id: userId },
+            omit: {
+                password: true
+            }
         })
-
-        return user
     }
 
     async getUserByEmail(email: string) {
-        const user = await this.prisma.user.findUnique({
-            where: { email: email }
+        return this.prisma.user.findUnique({
+            where: { email: email },
         })
-
-        return user
     }
 }
