@@ -41,6 +41,7 @@ export class AppController {
 
   @Put('create-content')
   async createContent(@Headers('x-userid') userId: string, @Body() content: Content) {
+    console.log(userId)
     const user = await this.userService.getUserById(userId)
 
     if (!user) {

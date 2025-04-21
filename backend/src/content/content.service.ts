@@ -40,7 +40,7 @@ export class ContentService {
         return this.prisma.contentItem.create({
             data: {
                 title: content.title,
-                authors: { connect: content.authors.map(author => ({ id: author })) },
+                authors: { connect: content.authors.map(author => ({ id: author.id })) },
                 status: content.status,
                 type: content.type,
                 deadline: content.deadline
@@ -59,7 +59,7 @@ export class ContentService {
             where: { id: content.id },
             data: {
                 title: content.title,
-                authors: { connect: content.authors.map(author => ({ id: author })) },
+                authors: { connect: content.authors.map(author => ({ id: author.id })) },
                 status: content.status,
                 type: content.type
             }

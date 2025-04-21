@@ -26,9 +26,9 @@ This is my version of a basic editorial tracker.
 - [ ] Unit tests
 
 # TODO - Frontend
-- [ ] Setup frontend (HeroUI)
-- [ ] Github repo
-- [ ] Login in screen 
-    - [ ] Keep login in status in context
+- [x] Setup frontend (HeroUI)
+- [x] Github repo
+- [x] Login in screen 
+    - [x] Keep login in status in context
     - [ ] Use modals for creating and editing 
-    - [ ] One page which either shows login or dashboard
+    - [x] One page which either shows login or dashboard
