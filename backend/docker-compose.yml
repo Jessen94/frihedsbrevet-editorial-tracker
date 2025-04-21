@@ -1,0 +1,21 @@
+services:
+  db:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: friheds
+      POSTGRES_PASSWORD: brevet
+      PGDATA: /data/postgres
+      POSTGRES_DB: freedomDB
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - db
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  db:
