@@ -37,4 +37,11 @@ describe('AppController', () => {
       expect(user).rejects.toThrow()
     })
   });
+
+  describe('getContent', () => {
+    it('should return all content items for a user', () => {
+      const content = appController.getContent('1')
+      expect(content).toBeDefined()
+    })
+  })
 });

@@ -6,8 +6,9 @@ export class AuthService {
     constructor(private readonly userService: UserService) { }
 
     async login(email: string, password: string) {
-        const user = await this.userService.getUser(email)
-
+        console.log(email, password)
+        const user = await this.userService.getUserByEmail(email)
+        console.log(user)
         if (!user || user.password !== password) {
             throw new UnauthorizedException('Invalid credentials')
         }

@@ -4,10 +4,10 @@ This is my version of a basic editorial tracker.
 ## Setup
 
 ### Backend 
-nestjs for extensibility
-Prisma as orm 
-Both widely adopted 
-Have seen them work in prod
+- Nestjs for extensibility
+- Prisma as orm 
+- Both widely adopted 
+- Have seen them work in prod
 
 ### Frontend
 
@@ -16,12 +16,13 @@ Have seen them work in prod
 
 # TODO - Backend
 - [x] Setup backend (Nestjs and prisma) 
-- [ ] github repo
-- [ ] Basic routes
-    - [ ] Fecth all
-    - [ ] Create one
-    - [ ] Update Status
-    - [ ] Display content according to role (All for editors, userbased for contributors)
+- [x] github repo
+- [x] Basic routes
+    - [x] Login route
+    - [x] Fetch all
+    - [x] Create one
+    - [x] Update Status
+    - [x] Display content according to role (All for editors, userbased for contributors)
 - [ ] Unit tests
 
 # TODO - Frontend
